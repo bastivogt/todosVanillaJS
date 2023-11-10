@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <h1>Todos</h1>
+    <template id="todos-template">
+      <li>
+        <input class="todo-done" type="checkbox" checked="checked" />
+        <span class="todo-container">
+          #<span class="todo-id">1</span>
+          <span class="todo-title">Todo Title</span>
+        </span>
+        <button class="todo-delete">x</button>
+      </li>
+    </template>
+    <input type="text" id="todo-new-input" placeholder="Todo" />
+    <button id="todo-new-btn">Add</button>
+    <div id="todos-container"></div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

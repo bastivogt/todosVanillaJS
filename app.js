@@ -17,14 +17,13 @@ function renderTodos(container, template) {
 
   TodoServiceInstance.todos.forEach((todo) => {
     const tpl = template.content.cloneNode(true);
-    const checked = todo.done ? "checked" : "";
     const todoDone = tpl.querySelector(".todo-done");
     const todoID = tpl.querySelector(".todo-id");
     const todoTitle = tpl.querySelector(".todo-title");
     const todoContainer = tpl.querySelector(".todo-container");
     const todoDelete = tpl.querySelector(".todo-delete");
 
-    todoDone.checked = checked;
+    todoDone.checked = todo.done;
     todoID.innerText = todo.id;
     todoTitle.innerText = todo.title;
 

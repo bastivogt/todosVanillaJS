@@ -6,7 +6,7 @@ TodoServiceInstance.todos = data;
 
 const elements = {
   todosContainer: document.getElementById("todos-container"),
-  todosTemplate: document.getElementById("todos-template"),
+  todoTemplate: document.getElementById("todo-template"),
   todoNewInput: document.getElementById("todo-new-input"),
   todoNewBtn: document.getElementById("todo-new-btn"),
 };
@@ -61,7 +61,7 @@ function addNewTodo() {
 TodoServiceInstance.onUpdate = function () {
   console.log("onUpdate");
   console.log(TodoServiceInstance.todos);
-  renderTodos(elements.todosContainer, elements.todosTemplate);
+  renderTodos(elements.todosContainer, elements.todoTemplate);
 };
 
 TodoServiceInstance.addTodo({
@@ -84,4 +84,4 @@ console.log(TodoServiceInstance.getTodoById(4));
 
 TodoServiceInstance.updateTodo(1, "Erstes Todo", true);
 
-renderTodos(elements.todosContainer, elements.todosTemplate);
+renderTodos(elements.todosContainer, elements.todoTemplate);

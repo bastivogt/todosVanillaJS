@@ -24,8 +24,8 @@ function renderTodos(container, template) {
     const todoDelete = tpl.querySelector(".todo-delete");
 
     todoDone.checked = todo.done;
-    todoID.innerText = todo.id;
-    todoTitle.innerText = todo.title;
+    todoID.textContent = todo.id;
+    todoTitle.textContent = todo.title;
 
     if (todo.done) {
       todoContainer.style["text-decoration"] = "line-through";
